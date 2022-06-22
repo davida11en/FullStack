@@ -1,0 +1,39 @@
+{
+  "name": "easystreet",
+  "private": true,
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "start": "webpack --watch --mode=development",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "webpack "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "babel-loader": "^8.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^5.3.3",
+    "redux": "^4.2.0",
+    "redux-logger": "^3.0.6",
+    "webpack-cli": "^4.10.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.29.3"
+  },
+  "engines": {
+    "node": "12.5.0",
+    "npm": "6.9.0"
+  }
+}

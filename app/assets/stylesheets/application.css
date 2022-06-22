@@ -1,0 +1,68 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import url(reset.css);
+@import url("https://use.typekit.net/eeo0enz.css");
+
+.greetings-message {
+    font-size: 42px;
+    line-height: 50px;
+    font-weight: 100;
+    padding: 75px 0px 50px;
+    text-align: center;
+}
+
+html, body {
+    font-family: source-sans-pro, sans-serif;
+}
+
+.user-nav {
+    height: 50px;
+    line-height: 50px;
+    background: #032765;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+div.header > ul {
+    font-size: 14px;
+    padding-right: 10px;
+    display: flex;
+}
+li {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+}
+
+a:link, a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+#map-container {
+    width: 500px;
+    height: 500px;
+}
