@@ -1,16 +1,28 @@
-import { connect } from 'react-redux';
-import { signup, login } from '../../actions/session_actions';
-import { closeModal } from "../../actions/modal_actions";
-import SessionForm from './session_form';
+//import connect from react-redux, 
+//then the specific thunk action creator and component
+//we want the container to use
+import React from 'react';
+import { connect } from "react-redux";
+import SignupForm from './signup_form';
+import { createNewUser, clearErrors } from "../../actions/session_actions";
+import { closeModal } from '../../actions/modal_actions'; 
+
+//make the signup class now
+
+//now make mapDispatchTToProps (mDTP)
 
 const mSTP = (state, ownProps) => ({
-    errors: state.errors.session,
-    formType: 'Sign Up'
+    errors: state.errors.session
 })
 
-const mDTP = (dispatch) => ({
-    processForm: (user) => dispatch(signup(user)),
-    closeModal: () => dispatch(closeModal()),
-    login: (user) => dispatch(login(user)),
+
+//returns a POJO
+const mDTP = dispatch => ({
+    createNewUser: formUser => dispatch(createNewUser(formUser)),
+    clearErrors: () => dispatch(clearErrors()),
+    closeModal: () => dispatch(closeModal())
 });
-export default connect(mSTP, mDTP)(SessionForm)
+
+export default connect(mSTP, mDTP)(SignupForm);
+//this will make the createNewUser available in the props
+//of Signup.jsx

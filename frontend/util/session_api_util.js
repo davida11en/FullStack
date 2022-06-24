@@ -1,25 +1,24 @@
-// request that creates a new user
-export const signup = (user) => (
+export const postUser = (user) => (
     $.ajax({
-        method: 'POST',
-        url: `/api/users`,
-        data: { user }
+        url: '/api/users',
+        method: 'POST',    //is a post request because data is being sent
+        data: { user },  //nests user object under keyword:user
     })
 );
 
-// request that creates a new session
-export const login = (user) => (
+//login
+export const postSession = (user) => (
     $.ajax({
+        url:  '/api/session',
         method: 'POST',
-        url: `/api/session`,
-        data: { user }
+        data: { user },  //creates a new session with the user being logged in
     })
 );
 
-// request that deletes the current session
-export const logout = () => (
-    $.ajax({
-        method: 'DELETE',
-        url: `/api/session`
-    })
-);
+//logout
+export const deleteSession = () => (
+   $.ajax({
+    url: '/api/session',
+    method: 'DELETE', //destroys the current session
+   })
+)

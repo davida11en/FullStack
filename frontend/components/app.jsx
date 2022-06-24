@@ -6,16 +6,13 @@ import { Route } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 import ModalContainer from "./modal/modal_container";
 
-import SessionForm from './session/session_form'
+import LoginForm from './session/login_form'
+import Signup from './session/signup_form'
 
 const App = (props) => (
     <div>
-        <SessionForm props={props}/>
-
-        {/* <AuthRoute path="/login" component={LoginFormContainer} />
-        <AuthRoute path="/signup" component={SignupFormContainer} />
-        <br></br>
-        <Route exact path="/" component={SearchContainer} /> */}
+        <Route path="/signup" component={SignupFormContainer} />
+        <Route path="/login" component={LoginFormContainer} />
     </div>
 )
 
