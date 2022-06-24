@@ -13,20 +13,49 @@
  *= require_tree .
  *= require_self
  */
-
+/* 
 @import url(reset.css);
 @import url("https://use.typekit.net/eeo0enz.css");
+@import url(splash.css);
+@import url(modal.scss);
+@import url(nav.css);
+@import url(searchmod.css); */
 
-.greetings-message {
-    font-size: 42px;
-    line-height: 50px;
+/* 
+html,
+body {
+    font-family: source-sans-pro, regular;
     font-weight: 100;
-    padding: 75px 0px 50px;
-    text-align: center;
+    font-size: 1em;
+    color: #1A1F2C;
+    height: 100%;
+    line-height: 1.6;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding: 175px 0 0;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
 }
 
-html, body {
-    font-family: source-sans-pro, sans-serif;
+p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+input {
+    writing-mode: horizontal-tb;
+    display: inline-block;
+    text-align: start;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: rgb(118, 118, 118);
+    border-image: initial;
 }
 
 .user-nav {
@@ -34,35 +63,53 @@ html, body {
     line-height: 50px;
     background: #032765;
 }
+
 .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
 }
-div.header > ul {
+
+.logo-img {
+    width: 140px;
+    height: 40px;
+    padding-left: 40px;
+    padding-top: 5px;
+}
+
+div.header>ul {
     font-size: 14px;
     padding-right: 10px;
     display: flex;
 }
+
 li {
     padding-left: 10px;
     padding-right: 10px;
     font-size: 14px;
 }
 
-a:link, a:visited {
+.user-nav-account-links:link,
+.user-nav-account-links:visited {
     color: white;
     background-color: transparent;
     text-decoration: none;
 }
-a:hover {
+
+.user-nav-account-links:hover {
     color: white;
     background-color: transparent;
     text-decoration: underline;
 }
 
-#map-container {
-    width: 500px;
-    height: 500px;
+.fa-solid fa-magnifying-glass {
+    min-width: 20px;
+    min-height: 20px;
 }
+*/
+.home-page {
+    background: url(https://streetsmart-safeassets.s3.amazonaws.com/images/monopolybanner.png) center bottom / 3360px no-repeat rgb(220, 246, 255);
+    background-size: contain;
+    height: 100vh;
+} 

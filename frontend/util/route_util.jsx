@@ -2,6 +2,9 @@ import { Route, Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import React from "react";
 
+// goal is to conditionally render either the component or a redirect
+//  based on whether user is logged in
+
 const Auth = ({ component: Component, path, loggedIn, exact }) => (
     <Route 
         path={path}

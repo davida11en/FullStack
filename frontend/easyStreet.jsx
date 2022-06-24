@@ -3,13 +3,12 @@ import ReactDOM from "react-dom";
 import configureStore from "./store/store";
 import Root from './components/root';
 
-
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById('root');
     let store;
     
     // bootstrapping current user, then delete for security
-    if(window.currentUser) {
+    if (window.currentUser) {
       const preloadedState = {
         entities: {
           users: {
@@ -29,8 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.store = store;
     window.getState = store.getState;
     window.dispatch = store.dispatch;
-    // window.fetchBenches = fetchBenches;
   
-  
+    // rendering app in root container
     ReactDOM.render(<Root store={store} />, root);
 })

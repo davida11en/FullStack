@@ -1,57 +1,72 @@
-import React from "react";
-import { Link } from 'react-router-dom';
+import React from 'react';
 
-export default class SessionForm extends React.Component {
+class SessionForm extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
-            username: "",
-            password: ""
-        };
+            email: '',
+            password: '',
+        }
+        
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleInput = type => {
-        return e => {
-            this.setState({ [type]: e.target.value });
+    handleSubmit(e) {
+        e.preventDefault();
+        const user = Object.assign({}, this.state);
+        this.props.processForm(user);   
+    }
+
+    update(field) {
+        return e => this.setState({ [field]: e.currentTarget.value })
+    }
+
+    
+    componentWillUnmount() {
+        if (this.props.errors.length) {
+        this.props.clearErrors();
         }
     }
 
-    handleSubmit = e => {
-        e.preventDefault();
-        const user = Object.assign( {}, this.state );
-        this.props.processForm(user); 
-    }
-
     render() {
-        const otherFormType = (this.props.formType === "Login") ? ("Sign Up") : ("Login");
-        const otherFormLink = (this.props.formType === "Login") ? ("signup") : ("login");
-
         return (
-            <div className="session-form">
-                <h1 className="session-form-header">{this.props.formType}</h1>
-                <Link to={`/${otherFormLink}`}>{`or Click to ${otherFormType}`}</Link>
-                <br></br><br></br>
-
-                <form className="session-form-element">
-                    <label>Username:
+            <div className='session-form-container'>
+                <h1>Take a stroll down EasyStreet</h1>
+                <form onSubmit={this.handleSubmit} className="session-form-box">
+                    <label htmlFor='email'>Email
                         <input
+                            className='session-form-input'
                             type="text"
-                            value={this.state.username}
-                            onChange={this.handleInput("username")}
+                            placeholder='Email'
+                            value={this.state.email}
+                            onChange={this.update('email')}
                         />
                     </label>
-                    <br></br>
-                    <label>Password:
+                    <label htmlFor='password'>Password
                         <input
-                            type="password"
+                            className='session-form-input'
+                            type="text"
+                            placeholder='Password'
                             value={this.state.password}
-                            onChange={this.handleInput("password")}
+                            onChange={this.update('password')}
                         />
                     </label>
-                    <br></br>
-                    <button onClick={this.handleSubmit}>{this.props.formType}</button>
+                    
+                    {/* <div>
+                        {this.props.errors.map((error, i) => (
+                        <p className="errors" key={i}>{error}</p>
+                        ))}
+                    </div> */}
+
+                    <button type="submit" onClick={this.handleSubmit}>
+                        {this.props.formType}
+                    </button>
                 </form>
             </div>
         )
     }
+
 }
+
+export default SessionForm

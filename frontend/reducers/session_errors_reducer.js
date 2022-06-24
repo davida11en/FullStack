@@ -1,7 +1,8 @@
-import { RECEIVE_CURRENT_USER, RECEIVE_SESSION_ERRORS, CLEAR_ERRORS } from '../actions/sessions_actions';
+import { RECEIVE_CURRENT_USER, RECEIVE_SESSION_ERRORS, CLEAR_ERRORS } from '../actions/session_actions';
 
 const _nullErrors = [];
 
+// to keep track of any error messages
 const sessionErrorsReducer = (state = _nullErrors, action) => {
     Object.freeze(state);
 
@@ -15,6 +16,6 @@ const sessionErrorsReducer = (state = _nullErrors, action) => {
         default:
             return state;
     }
-}
+};
 
 export default sessionErrorsReducer;
