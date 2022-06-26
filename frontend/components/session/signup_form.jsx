@@ -29,7 +29,7 @@ class SignupForm extends React.Component {
         //create a user
         this.props.createNewUser(this.state)
             .then( () => this.props.closeModal())  //success             //fail ,() => window.location.reload() 
-            .then( () => this.props.history.push(`/`))
+            // .then( () => this.props.history.push(`/home`))
     }   //user is created, redirect
 
     render() {
@@ -41,7 +41,7 @@ class SignupForm extends React.Component {
         )}
         
         return (
-            <div className="signup-form-container">
+            <div className="session-form">
                 <h2>Sign Up!</h2>
                 <form onSubmit={this.handleSubmit}>
     

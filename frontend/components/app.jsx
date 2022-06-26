@@ -1,9 +1,10 @@
 import React from 'react';
-
+import NaviContainer from './navi/navi_container';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
+import HomePage from './homepage/homepage';
 import { Route } from 'react-router-dom';
-import { AuthRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import ModalContainer from "./modal/modal_container";
 
 import LoginForm from './session/login_form'
@@ -11,8 +12,13 @@ import Signup from './session/signup_form'
 
 const App = (props) => (
     <div>
-        <Route path="/signup" component={SignupFormContainer} />
-        <Route path="/login" component={LoginFormContainer} />
+        <ModalContainer />
+        <Route path="/" component={NaviContainer} />
+        <Route path="/home" component={HomePage} />
+    
+        {/* <Route path="/login" component={LoginFormContainer} />
+        <Route path="/signup" component={SignupFormContainer} /> */}
+        
     </div>
 )
 

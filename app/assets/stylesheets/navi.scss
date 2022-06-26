@@ -1,0 +1,39 @@
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgb(238, 255, 0);
+    align-items: center;
+    .btn {
+      background-color: white;
+      padding: 10px;
+      box-shadow: 3px 3px 3px rgb(255, 255, 255);
+      text-decoration: none;
+    }
+    .btn:hover {
+       background-color: rgb(240, 240, 240);
+       box-shadow: 1px 1px 1px rgb(255, 255, 255);
+    }
+  }
+  
+  .user-show-nav-bar {
+    display: flex;
+    position: sticky;
+    justify-content: right;
+    padding: 20px;
+    background: rgb(238, 255, 0);
+    align-items: center;
+    .btn {
+      display: block;
+      background-color: white;
+      padding: 10px;
+      box-shadow: 3px 3px 3px white;
+      text-decoration: none;
+    }
+    .btn:hover {
+       background-color: rgb(240, 240, 240);
+       box-shadow: 1px 1px 1px white;
+    }
+  }
+   
+  

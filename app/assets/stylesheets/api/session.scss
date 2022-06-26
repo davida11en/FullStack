@@ -1,27 +1,30 @@
 // Place all the styles related to the api/session controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-// .btn {
-//     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-//     font-size: larger;
-
-//     border: 2px black dotted;
-//     padding: 10px;
-//     margin: 10px;
-
-//     background-color: aquamarine;
-// }
-
-// .logo {
-//     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-//     margin: 10px;
-//     padding: 10px;
-
-//     // border: 2px dashed aquamarine;
-
-// }
-
-// .session-form-element input {
-//     margin-top: 5px;
-// }
+ 
+.session-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+  form {
+     height: 350px;
+     width: 400px;
+     background: rgb(240, 240, 240);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+  }
+  label {
+    padding: 10px;
+    display: block;
+  }
+  button {
+    display: block;
+    padding: 10px;
+    margin: 20px;
+  }
+}

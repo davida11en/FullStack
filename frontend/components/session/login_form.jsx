@@ -27,7 +27,7 @@ class LoginForm extends React.Component {
         
         this.props.loginUser(this.state)
             .then( () => this.props.closeModal()) 
-            .then( () => this.props.history.push(`/profile`) )
+            // .then( () => this.props.history.push(`/account`) )
     }   
 
     handleDemoLogin(e) {
@@ -35,7 +35,7 @@ class LoginForm extends React.Component {
 
         this.props.loginUser({username:'demo@user.com', password:'123456'})
         .then( () => this.props.closeModal()) 
-        .then( () => this.props.history.push(`/`) )
+        // .then( () => this.props.history.push(`/account`) )
     }
 
     render() {
@@ -48,7 +48,7 @@ class LoginForm extends React.Component {
         )}
 
         return (
-            <div className="login-form-container">
+            <div className="session-form">
                 
                 <form>
                 <h2>Login!</h2>

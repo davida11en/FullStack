@@ -1,15 +1,13 @@
 import { connect } from "react-redux";
 import Modal from "./modal";
-import { closeModal } from "../../actions/modal_actions";
-import { openModal } from "../../actions/modal_actions";
+import { clearErrors } from "../../actions/session_actions";
 
 const mSTP = (state) => ({
-  modal: state.ui.modal,
+  errors: state.errors.session
 });
 
 const mDTP = (dispatch) => ({
-  openModal: (modal) => dispatch(openModal(modal)),
-  closeModal: () => dispatch(closeModal()),
+  clearErrors: () => dispatch(clearErrors())
 });
 
 export default connect(mSTP, mDTP)(Modal);

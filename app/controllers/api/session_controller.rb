@@ -11,7 +11,6 @@ class Api::SessionController < ApplicationController
         render json: ['Invalid username or password.'],  status: 422
       else
         login(@user)
-        # redirect_to user_url(@user)
         render "api/users/show"
       end
   
@@ -19,7 +18,6 @@ class Api::SessionController < ApplicationController
   
     def destroy
       logout!
-      # redirect_to new_session_url
       render json: {} 
     end
 end
