@@ -39,7 +39,6 @@ class SignupForm extends React.Component {
 
         this.props.loginUser({username:'demo@user.com', password:'123456'})
         .then( () => this.props.closeModal()) 
-        // .then( () => this.props.history.push(`/account`) )
     }
     render() {
         let errors;
@@ -51,9 +50,9 @@ class SignupForm extends React.Component {
         
         return (
             <div className="session-form">
-                <h2>Sign Up!</h2>
+
                 <form onSubmit={this.handleSubmit}>
-    
+                    <h2>Sign Up!</h2>
                     <label>Username:
                         <input
                             type="text"

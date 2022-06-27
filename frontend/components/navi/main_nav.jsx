@@ -5,20 +5,33 @@ function mainNav(props){
         <div className='main-nav-container'>
             <div className='main-nav'>
                 <div className='main-nav-items'>
-                    <ul className='main-nav-list'>
-            
-                        <li className='mnv-li'>
-                            Rent
-                        </li>
-                        <li className='mnv-li'>
-                            Buy
-                        </li>
-                        <li className='mnv-li'>
-                            <a href='https://www.linkedin.com/in/david-allen-asencio-9107b0122/' className='mnv-alink'>
-                                LinkedIn
-                            </a>
-                        </li>
-                    </ul>
+
+                <div className="dropdown">
+                        <button className="dropbtn">Rent</button>
+                            <div className="dropdown-content">
+                                <p>New York City</p>
+                                    <a href="#">Manhattan</a>
+                                    <a href="#">Brooklyn</a>
+                                    <a href="#">Queens</a>
+                                    <a href="#">The Bronx</a>
+                                    <a href="#">Staten Island</a>
+                            </div>
+                        </div>
+
+                        <div className="dropdown2">
+                        <button className="dropbtn2">Buy</button>
+                            <div className="dropdown-content2">
+                                <p>New York City</p>
+                                    <a href="#">Manhattan</a>
+                                    <a href="#">Brooklyn</a>
+                                    <a href="#">Queens</a>
+                                    <a href="#">The Bronx</a>
+                                    <a href="#">Staten Island</a>
+                            </div>
+                        </div>
+                        <div className="linkedIn-btn">
+                           <a href='https://www.linkedin.com/in/david-allen-asencio-9107b0122/'>LinkedIn</a>
+                        </div>
                 </div>
 
                 <div className='main-nav-search'>

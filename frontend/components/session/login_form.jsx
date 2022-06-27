@@ -1,5 +1,4 @@
 import React from 'react'
-import { closeModal } from '../../actions/modal_actions'
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -27,7 +26,6 @@ class LoginForm extends React.Component {
         
         this.props.loginUser(this.state)
             .then( () => this.props.closeModal()) 
-            // .then( () => this.props.history.push(`/account`) )
     }   
 
     handleDemoLogin(e) {
@@ -35,7 +33,6 @@ class LoginForm extends React.Component {
 
         this.props.loginUser({username:'demo@user.com', password:'123456'})
         .then( () => this.props.closeModal()) 
-        // .then( () => this.props.history.push(`/account`) )
     }
 
     render() {

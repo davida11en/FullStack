@@ -1,0 +1,46 @@
+
+.home-page {
+    // background-color: coral;
+    // position: static;
+    // background-size: contain
+    background: url(https://streetsmart-safeassets.s3.amazonaws.com/images/monopolybanner.png) center bottom / 3360px no-repeat rgb(220, 246, 255);
+    background-size: contain;
+    height: 100vh;
+}
+
+
+
+
+.home-message {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 300;
+    padding: 150px 0 50px;
+    text-align: center;
+}
+
+.home-submes {
+    padding: 10px;
+    text-align: center;
+    margin: 0px;
+    text-transform: none;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 24px;
+    -webkit-font-smoothing: antialiased;
+    color: rgb(26, 31, 44);
+    display: block;
+
+}
+
+.home-submes-link {
+    text-decoration: underline 1px;
+    text-underline-offset: 3px;
+    color: rgb(22, 77, 180);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.home-submes-link:hover {
+    background-color: #f1c4ac;
+}

@@ -13,10 +13,10 @@
  *= require_tree .
  *= require_self
  */
- @import url(modal.scss);
+@import url(modal.scss);
 @import url(reset.css);
 // @import url("https://use.typekit.net/eeo0enz.css");
-@import url(splash.scss);
+@import url(home.scss);
 
 @import url(navi.scss);
 
@@ -32,24 +32,3 @@ html, body, div {
   color: red
 }
 
-// .home-page {
-//     min-height: 400px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: flex-end;
-//     h1 {
-//     height: 100%;
-//     z-index: 1;
-//     color: white;
-//     text-shadow: 1px 1px 15px black;
-//     text-align: center;
-//     width: 100%;
-//     }
-//   }
-  
-
-.home-page {
-    background: url(https://streetsmart-safeassets.s3.amazonaws.com/images/monopolybanner.png) center bottom / 3360px no-repeat rgb(220, 246, 255);
-    background-size: contain;
-    height: 100vh;
-} 
