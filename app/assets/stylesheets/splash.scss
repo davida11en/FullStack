@@ -1,0 +1,38 @@
+.greeting-message {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 300;
+    padding: 150px 0 50px;
+    text-align: center;
+}
+
+// .home-splash {
+//     background-color: coral;
+//     position: static;
+// }
+
+.greeting-submes {
+    padding: 10px;
+    text-align: center;
+    margin: 0px;
+    text-transform: none;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 24px;
+    -webkit-font-smoothing: antialiased;
+    color: rgb(26, 31, 44);
+    display: block;
+
+}
+
+.greeting-submes-link {
+    text-decoration: underline 1px;
+    text-underline-offset: 3px;
+    color: rgb(22, 77, 180);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.greeting-submes-link:hover {
+    background-color: #f1c4ac;
+}

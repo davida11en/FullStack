@@ -19,4 +19,6 @@ const mDTP = dispatch => ({
 });
 
 
-export default connect(mSTP, mDTP)(Navi);
+const NaviContainer = connect(mSTP, mDTP)(Navi);
+
+export default NaviContainer;

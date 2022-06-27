@@ -13,6 +13,7 @@ class SignupForm extends React.Component {
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleDemoLogin = this.handleDemoLogin.bind(this)
     }
 
     componentDidMount() {
@@ -32,6 +33,14 @@ class SignupForm extends React.Component {
             // .then( () => this.props.history.push(`/home`))
     }   //user is created, redirect
 
+    
+    handleDemoLogin(e) {
+        e.preventDefault()
+
+        this.props.loginUser({username:'demo@user.com', password:'123456'})
+        .then( () => this.props.closeModal()) 
+        // .then( () => this.props.history.push(`/account`) )
+    }
     render() {
         let errors;
         if(this.props.errors.responseJSON) {
