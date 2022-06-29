@@ -13,7 +13,7 @@ class SignupForm extends React.Component {
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
-        this.handleDemoLogin = this.handleDemoLogin.bind(this)
+        // this.handleDemoLogin = this.handleDemoLogin.bind(this)
     }
 
     componentDidMount() {
@@ -34,12 +34,12 @@ class SignupForm extends React.Component {
     }   //user is created, redirect
 
     
-    handleDemoLogin(e) {
-        e.preventDefault()
+    // handleDemoLogin(e) {
+    //     e.preventDefault()
 
-        this.props.loginUser({username:'demo@user.com', password:'123456'})
-        .then( () => this.props.closeModal()) 
-    }
+    //     this.props.loginUser({username:'demo@user.com', password:'123456'})
+    //     .then( () => this.props.closeModal()) 
+    // }
     render() {
         let errors;
         if(this.props.errors.responseJSON) {

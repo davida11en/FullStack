@@ -5,7 +5,7 @@ class LoginForm extends React.Component {
         super(props)
         
         this.state = {
-            username: '',
+            email: '',
             password:''
         }
 
@@ -31,7 +31,7 @@ class LoginForm extends React.Component {
     handleDemoLogin(e) {
         e.preventDefault()
 
-        this.props.loginUser({username:'demo@user.com', password:'123456'})
+        this.props.loginUser({email:'demo@user.com', password:'123456'})
         .then( () => this.props.closeModal()) 
     }
 
@@ -49,11 +49,11 @@ class LoginForm extends React.Component {
                 
                 <form onSubmit={this.handleSubmit}>
                 <h2>Login!</h2>
-                    <label>Username:
+                    <label>Email:
                         <input
                             type="text"
-                            value={this.state.username}
-                            onChange={this.update('username')}
+                            value={this.state.email}
+                            onChange={this.update('email')}
                             />
                     </label>
                         <br></br>

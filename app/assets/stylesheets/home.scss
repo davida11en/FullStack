@@ -8,9 +8,6 @@
     height: 100vh;
 }
 
-
-
-
 .home-message {
     font-size: 40px;
     line-height: 50px;
@@ -44,3 +41,54 @@
 .home-submes-link:hover {
     background-color: #f1c4ac;
 }
+
+// searchbar styling ---------------------
+// body {
+//     font-family: Arial;
+//   }
+
+.center-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    // min-height: 100vh;
+    // max-width:800px;
+  }
+  
+// .searchbox {
+//     box-sizing: border-box;
+//     margin: 0px;
+   
+// }
+  
+  form.center-search input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    // max-width:800px;
+    background: #f1f1f1;
+  }
+  
+  form.center-search button {
+    float: center;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.center-search button:hover {
+    background: #0b7dda;
+  }
+  
+  form.center-search::after {
+    content: "";
+    clear: both;
+    display: table;
+  }

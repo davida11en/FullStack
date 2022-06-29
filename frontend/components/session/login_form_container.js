@@ -1,3 +1,4 @@
+import React from 'react';
 import { connect } from 'react-redux';
 import { login } from '../../actions/session_actions';
 import { closeModal } from "../../actions/modal_actions";
@@ -10,7 +11,7 @@ const mSTP = (state, ownProps) => ({
 
 
  const mDTP = (dispatch) => ({
-  loginUser: (user) => dispatch(login(user)),
+  loginUser: (formUser) => dispatch(login(formUser)),
   closeModal: () => dispatch(closeModal()),
   clearErrors: () => dispatch(clearErrors()),
 });

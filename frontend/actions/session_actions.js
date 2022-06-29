@@ -28,16 +28,18 @@ export const clearErrors = () => ({
 // thunk action creators for the containers
 
 //postUser is an ajax request (in api util file) that returna a promise
-export const createNewUser = (newUser) => dispatch => postUser(newUser)
-//.then if we receive a user, dispatch our invoked action with the user
+export const createNewUser = (newUser) => dispatch => 
+    postUser(newUser)
     .then(user => dispatch(receiveCurrentUser(user)),
          err => dispatch(receiveErrors(err)) );
 
-export const login = (formUser) => dispatch => postSession(formUser)
+export const login = (formUser) => dispatch => 
+    postSession(formUser)
     .then(user => dispatch(receiveCurrentUser(user)),
          err => dispatch(receiveErrors(err)) );
 
 //thunk action creaters must be arrow functions if they take no args
-export const logout = () => dispatch => deleteSession()
+export const logout = () => dispatch => 
+    deleteSession()
     .then( () => dispatch(logoutCurrentUser()), 
         err => dispatch(receiveErrors(err)) );

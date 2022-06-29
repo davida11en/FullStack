@@ -7,4 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-user1 = User.create({ first_name: "demo", last_name: "user", email: "demo_user@demo.com", password: "password"})
+ActiveRecord::Base.connection.reset_pk_sequence!('users')
+# user1 = User.create({ first_name: "demo", last_name: "user", email: "demo_user@demo.com", password: "password"})
+
+
+user1 = User.create(
+    username: "bob",
+    email: "bob.com",
+    password: 123456
+  )

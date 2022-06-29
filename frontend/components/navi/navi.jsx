@@ -11,7 +11,7 @@ export default ({ currentUser, logout, openSignupForm, openLoginForm }) => {
       <div>
         <h2> Welcome, {currentUser.username}!</h2>
       
-        <Link className="btn" to="/home">Home</Link>
+        <Link className="btn" to="/explore">Home</Link>
         <Link className="btn" to="/account">Account</Link>
         <button className="btn" onClick={logout}>Log Out</button>
       </div>
@@ -19,7 +19,7 @@ export default ({ currentUser, logout, openSignupForm, openLoginForm }) => {
       :  //if there is no currentUser, return the following instead
   (
     <div>
-      <button className="btn" onClick={openLoginForm}>Login</button> 
+      <button className="btn" onClick={openLoginForm}>poop</button> 
       <button className="btn" onClick={openSignupForm}>Sign Up</button> 
     </div>
   );
