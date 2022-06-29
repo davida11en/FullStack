@@ -6943,3 +6943,401 @@ Processing by Api::SessionsController#create as JSON
 Completed 200 OK in 345ms (Views: 5.3ms | ActiveRecord: 14.8ms)
 
 
+Started POST "/api/session" for ::1 at 2022-06-29 14:31:37 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo@user.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:11
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "bill"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (2.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "vgUw04e5qN2MEKtM07BX5w"], ["updated_at", "2022-06-29 18:31:38.142962"], ["id", 2]]
+  ↳ app/models/user.rb:36
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (15.8ms)
+Completed 200 OK in 435ms (Views: 35.3ms | ActiveRecord: 17.3ms)
+
+
+Started DELETE "/api/session" for ::1 at 2022-06-29 14:31:40 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vgUw04e5qN2MEKtM07BX5w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (4.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "bill"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (2.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "1u-CjvYEmC2n0OX5I3G6CQ"], ["updated_at", "2022-06-29 18:31:40.333804"], ["id", 2]]
+  ↳ app/models/user.rb:36
+  [1m[35m (18.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+Completed 200 OK in 58ms (Views: 0.5ms | ActiveRecord: 28.6ms)
+
+
+Started POST "/api/session" for ::1 at 2022-06-29 14:31:42 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo@user.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (3.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "bill"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (9.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "ZxT8RfeULaaA8_P5dWzxDQ"], ["updated_at", "2022-06-29 18:31:42.449160"], ["id", 2]]
+  ↳ app/models/user.rb:36
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (2.0ms)
+Completed 200 OK in 330ms (Views: 13.8ms | ActiveRecord: 24.3ms)
+
+
+Started GET "/" for ::1 at 2022-06-29 15:23:48 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (22.0ms)
+Completed 500 Internal Server Error in 909ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?:
+  app/models/user.rb:6:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/application_controller.rb:8:in `current_user'
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___2407732016049214807_70175413325180'
+  app/controllers/static_pages_controller.rb:3:in `root'
+
+Started POST "/__better_errors/806bed45c50208c1/variables" for ::1 at 2022-06-29 15:23:52 -0400
+Started GET "/" for ::1 at 2022-06-29 15:25:30 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - premature end of char-class: /^[a-zA-Z0-9.!#$%&’*+/
+/home/david-allen/aa_classwork/FullStack/EasyStreet/app/models/user.rb:6: syntax error, unexpected '=', expecting '}'
+...with: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\...
+...                              ^
+/home/david-allen/aa_classwork/FullStack/EasyStreet/app/models/user.rb:46: unterminated string meets end of file
+/home/david-allen/aa_classwork/FullStack/EasyStreet/app/models/user.rb:46: syntax error, unexpected end-of-input, expecting keyword_end:
+  app/models/user.rb:6:in `'
+  app/controllers/application_controller.rb:8:in `current_user'
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___2407732016049214807_70175420138960'
+  app/controllers/static_pages_controller.rb:3:in `root'
+
+Started POST "/__better_errors/1d2571f7e7a2e25f/variables" for ::1 at 2022-06-29 15:25:31 -0400
+Started GET "/" for ::1 at 2022-06-29 15:28:21 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 209ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?:
+  app/models/user.rb:6:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/application_controller.rb:8:in `current_user'
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___2407732016049214807_70175416476500'
+  app/controllers/static_pages_controller.rb:3:in `root'
+
+Started POST "/__better_errors/e2c1321849c54c8b/variables" for ::1 at 2022-06-29 15:28:23 -0400
+Started GET "/" for ::1 at 2022-06-29 15:29:38 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (13.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZxT8RfeULaaA8_P5dWzxDQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 643ms (Views: 488.3ms | ActiveRecord: 154.5ms)
+
+
+Started DELETE "/api/session" for ::1 at 2022-06-29 15:29:45 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ZxT8RfeULaaA8_P5dWzxDQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:37
+  [1m[36mUser Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "bill"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:37
+  [1m[36mUser Update (6.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "7pV68ENdKCM1-HSkUy1MbQ"], ["updated_at", "2022-06-29 19:29:45.159197"], ["id", 2]]
+  ↳ app/models/user.rb:37
+  [1m[35m (16.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:37
+Completed 200 OK in 68ms (Views: 0.4ms | ActiveRecord: 29.3ms)
+
+
+Started POST "/api/users" for ::1 at 2022-06-29 15:29:53 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"retynery", "password"=>"[FILTERED]", "username"=>"erdtdthfn"}}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "erdtdthfn"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[35m (1.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:13
+Completed 422 Unprocessable Entity in 490ms (Views: 1.4ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/api/users" for ::1 at 2022-06-29 15:30:16 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"hey@aol.com", "password"=>"[FILTERED]", "username"=>"billy"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[36mUser Exists (3.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "billy"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[36mUser Create (9.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "hey@aol.com"], ["username", "billy"], ["password_digest", "$2a$12$HCub/82eU3d81YFL9EZ8zOw/tSxp28Si3R92aZswdR21XHyAagPFS"], ["session_token", "LPNxWHjqq3u1bUJugGMt5A"], ["created_at", "2022-06-29 19:30:17.031920"], ["updated_at", "2022-06-29 19:30:17.031920"]]
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:37
+  [1m[36mUser Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "billy"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:37
+  [1m[36mUser Update (1.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "_yT1wpIVHUOz4Z0L7A4TBg"], ["updated_at", "2022-06-29 19:30:17.082446"], ["id", 4]]
+  ↳ app/models/user.rb:37
+  [1m[35m (23.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:37
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (5.2ms)
+Completed 200 OK in 398ms (Views: 9.9ms | ActiveRecord: 46.1ms)
+
+
+Started DELETE "/api/session" for ::1 at 2022-06-29 15:30:25 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "_yT1wpIVHUOz4Z0L7A4TBg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:37
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "billy"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:37
+  [1m[36mUser Update (9.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "jYwCBbxKIly39tf0jPCkHw"], ["updated_at", "2022-06-29 19:30:25.994727"], ["id", 4]]
+  ↳ app/models/user.rb:37
+  [1m[35m (118.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:37
+Completed 200 OK in 151ms (Views: 0.4ms | ActiveRecord: 131.0ms)
+
+
+Started POST "/api/session" for ::1 at 2022-06-29 15:30:46 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"bob.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bob.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:37
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "bob"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:37
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/models/user.rb:37
+Completed 422 Unprocessable Entity in 280ms (ActiveRecord: 3.3ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Email is invalid:
+  app/models/user.rb:37:in `reset_session_token!'
+  app/controllers/application_controller.rb:12:in `login'
+  app/controllers/api/sessions_controller.rb:13:in `create'
+
+Started POST "/api/session" for ::1 at 2022-06-29 15:30:50 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"bob.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bob.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:37
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "bob"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:37
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/models/user.rb:37
+Completed 422 Unprocessable Entity in 347ms (ActiveRecord: 3.2ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Email is invalid:
+  app/models/user.rb:37:in `reset_session_token!'
+  app/controllers/application_controller.rb:12:in `login'
+  app/controllers/api/sessions_controller.rb:13:in `create'
+
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (5039.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "EasyStreet_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (104.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "EasyStreet_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (92.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "EasyStreet_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (750.3ms)[0m  [1m[35mCREATE DATABASE "EasyStreet_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (488.0ms)[0m  [1m[35mCREATE DATABASE "EasyStreet_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (8.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (17.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (156.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (15.8ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_first_name" ON "users"  ("first_name")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_last_name" ON "users"  ("last_name")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (55.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (6.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220624170844)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220624134557);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (38.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-06-29 19:34:05.037008"], ["updated_at", "2022-06-29 19:34:05.037008"]]
+  ↳ db/schema.rb:13
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (1.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (92.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "first_name" character varying, "last_name" character varying)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (53.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (15.3ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_first_name" ON "users"  ("first_name")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_last_name" ON "users"  ("last_name")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (46.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (99.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220624170844)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (9.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220624134557);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (249.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-06-29 19:34:05.755035"], ["updated_at", "2022-06-29 19:34:05.755035"]]
+  ↳ db/schema.rb:13
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (1.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2022-06-29 19:34:05.767942"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bob"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "bob@aol.com"], ["username", "bob"], ["password_digest", "$2a$12$KgMlrFBbA6RJYIf8baMZYuB0gQxlZ9JbyZ1SWB6B6CqX6GyGCt8.m"], ["session_token", "dCVYZZI6p2H7rVydkV4x2w"], ["created_at", "2022-06-29 19:34:06.150234"], ["updated_at", "2022-06-29 19:34:06.150234"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bill"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "demo@user.com"], ["username", "bill"], ["password_digest", "$2a$12$r8e0zc1IaRSOpJq4Se/WTeEyINBYxkpAESjkH3.FZUItF7/Jv8oce"], ["session_token", "TnmPMSXh3dLQ6R_AdsqGsg"], ["created_at", "2022-06-29 19:34:06.467917"], ["updated_at", "2022-06-29 19:34:06.467917"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (1.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bob"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "bob@aol.com"], ["username", "bob"], ["password_digest", "$2a$12$R28604BshpBpRzKlkciv9.SCJvwEsmlo9cYHeFb7Pz4EScMLG3eAi"], ["session_token", "7HWCKggc4440L4sGjvpZnw"], ["created_at", "2022-06-29 19:34:19.028445"], ["updated_at", "2022-06-29 19:34:19.028445"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bill"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "demo@user.com"], ["username", "bill"], ["password_digest", "$2a$12$hB2c9YnCUXySs6vwpiim1.WOx5k7KnBt1.hsK6sKCKh5k90mOpeuy"], ["session_token", "kWleSruyXkk_oaoaewVAaQ"], ["created_at", "2022-06-29 19:34:19.260105"], ["updated_at", "2022-06-29 19:34:19.260105"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20

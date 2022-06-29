@@ -13,11 +13,11 @@ ActiveRecord::Base.connection.reset_pk_sequence!('users')
 
 user1 = User.create(
     username: "bob",
-    email: "bob.com",
+    email: "bob@aol.com",
     password: 123456
   )
 
-  User.create!(
+  User.create(
     username: "bill",
     email: "demo@user.com",
     password: 123456
