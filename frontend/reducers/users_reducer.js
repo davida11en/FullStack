@@ -6,11 +6,19 @@ const usersReducer = (state = {}, action) => {
 
     
     switch(action.type) {
-        case RECEIVE_CURRENT_USER, RECEIVE_USER:
+        case RECEIVE_CURRENT_USER:
+        case RECEIVE_USER:
+        //     console.log('looking for state11', state)
+        //     console.log('looking for action11', action)
+
             return Object.assign( {}, state, { [action.user.id]: action.user });
         case RECEIVE_ALL_USERS:
+            // console.log('looking for state22', state)
+            // console.log('looking for action22', action)
                 return Object.assign( {}, action.users, state);
         default:
+            // console.log('looking for state33', state)
+            // console.log('looking for action33', action)
             return state;
     }
 }

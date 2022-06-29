@@ -30,7 +30,10 @@ export const clearErrors = () => ({
 //postUser is an ajax request (in api util file) that returna a promise
 export const createNewUser = (newUser) => dispatch => 
     postUser(newUser)
-    .then(user => dispatch(receiveCurrentUser(user)),
+    .then(user => {
+        console.log('LOOKING FOR USER', user)
+        dispatch(receiveCurrentUser(user))
+    },
          err => dispatch(receiveErrors(err)) );
 
 export const login = (formUser) => dispatch => 

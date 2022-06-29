@@ -11,7 +11,7 @@ export default ({ currentUser, logout, openSignupForm, openLoginForm }) => {
       <div>
         <h2> Welcome, {currentUser.username}!</h2>
       
-        <Link className="btn" to="/explore">Home</Link>
+        <Link className="btn" to="/home">Home</Link>
         <Link className="btn" to="/account">Account</Link>
         <button className="btn" onClick={logout}>Log Out</button>
       </div>

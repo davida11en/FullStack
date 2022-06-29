@@ -11,8 +11,8 @@ const App = (props) => (
         <ModalContainer />
         <Route path="/" component={Navz} />
         {/* <Route path="/" component={HomePageContainer} /> */}
-        <Route exact path="/explore" component={HomePageContainer} />
-        <ProtectedRoute exact path="/explore" component={CongratsContainer} />
+        <Route exact path="/home" component={HomePageContainer} />
+        {/* <ProtectedRoute exact path="/explore" component={CongratsContainer} /> */}
     </div>
 )
 
