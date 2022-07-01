@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 function mainNav(props){
     return(
@@ -10,11 +11,11 @@ function mainNav(props){
                         <button className="dropbtn">Rent</button>
                             <div className="dropdown-content">
                                 <p>New York City</p>
-                                    <a href="#">Manhattan</a>
-                                    <a href="#">Brooklyn</a>
-                                    <a href="#">Queens</a>
-                                    <a href="#">The Bronx</a>
-                                    <a href="#">Staten Island</a>
+                                    <Link className="borough" to="/listings/">Manhattan</Link>
+                                    <Link className="borough" to="/listings/">Brooklyn</Link>
+                                    <Link className="borough" to="/listings/">Queens</Link>
+                                    <Link className="borough" to="/listings/">The Bronx</Link>
+                                    <Link className="borough" to="/listings/">Staten Island</Link>
                             </div>
                         </div>
 
@@ -22,11 +23,11 @@ function mainNav(props){
                         <button className="dropbtn2">Buy</button>
                             <div className="dropdown-content2">
                                 <p>New York City</p>
-                                    <a href="#">Manhattan</a>
-                                    <a href="#">Brooklyn</a>
-                                    <a href="#">Queens</a>
-                                    <a href="#">The Bronx</a>
-                                    <a href="#">Staten Island</a>
+                                    <Link className="borough" to="/listings/">Manhattan</Link>
+                                    <Link className="borough" to="/listings/">Brooklyn</Link>
+                                    <Link className="borough" to="/listings/">Queens</Link>
+                                    <Link className="borough" to="/listings/">The Bronx</Link>
+                                    <Link className="borough" to="/listings/">Staten Island</Link>
                             </div>
                         </div>
                         <div className="linkedIn-btn">
@@ -40,7 +41,9 @@ function mainNav(props){
                             text="text"
                             placeholder='e.g. city, home-type'
                         />
-                        <button type="submit">🔍</button>
+                        <Link className="borough" to="/listings/">
+                            <button type="submit">🔍</button>
+                        </Link>
                     </form>
                 </div>
             </div>

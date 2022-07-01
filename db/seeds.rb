@@ -17,8 +17,28 @@ user1 = User.create(
     password: 123456
   )
 
-  User.create(
+User.create(
     username: "bill",
     email: "demo@user.com",
     password: 123456
-  )
+)
+
+Listing.destroy_all
+
+listing1 = Listing.create!({
+  name: "Demo House", 
+  address: "42 Wallabee Way", 
+  neighborhood: "Sydney",
+  borough: "Brooklyn",
+  zip: "12345", 
+  property_type: "Fish Tank",
+  rent_bool: [true, false].sample(),
+  owner_id: 3,
+  lat: rand(40.666885..40.740644),
+  lng: -rand(73.765498..73.966863),
+  bedrooms: 2,
+  favorites: 0,
+  bathrooms: 3,
+  price: 3,000,
+  description: "We found nemo"
+  })
