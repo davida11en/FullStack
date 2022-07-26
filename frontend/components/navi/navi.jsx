@@ -11,8 +11,8 @@ export default ({ currentUser, logout, openSignupForm, openLoginForm }) => {
       <div>
         <h2> Welcome, {currentUser.username}!</h2>
       
-        <Link className="btn" to="/">Home</Link>
-        <Link className="btn" to="/account">Account</Link>
+        <Link className="home-link" to="/">Home</Link>
+        <Link className="account-link" to="/account">Account</Link>
         <button className="logout-btn" onClick={logout}>Log Out</button>
       </div>
   )  
@@ -26,8 +26,7 @@ export default ({ currentUser, logout, openSignupForm, openLoginForm }) => {
 
   return (
     <header className="nav-bar">
-      <h1 className="logo">EasyStreet</h1>
-      <h4>thank you to all my classmates who carried me to this peak 💞</h4>
+      <h1 className="logo">easyStreet</h1>
       <div>
         {display}
       </div>

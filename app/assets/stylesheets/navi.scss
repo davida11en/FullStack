@@ -2,11 +2,13 @@
 .nav-bar {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    background: rgb(141, 99, 255);
+    padding: 13px;
+    background: rgb(17, 17, 148);
     align-items: center;
     .logo {
-      font-size: x-large;
+      font-size: 15px;
+      color: white;
+      font-weight: 700;
     }
 }
     // .btn {
@@ -22,7 +24,7 @@
   // }
 
   .main-nav-container {
-    background: rgb(71, 255, 117);
+    background: white;
     border-bottom: 1px solid #E6E6E6;
     height: auto;
     position: relative;
@@ -61,7 +63,7 @@
 
 // css for dropdown may go here
 .dropbtn {
-  background-color: #04AA6D;
+  background-color: white;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -77,7 +79,7 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: #0f156e;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -202,4 +204,42 @@
   //   }
   // }
    
+  // login signup logout buttons
+
+  button.login-btn {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: rgb(17, 17, 148);
+    color: white;
+    font-weight: 800;
+    border: rgb(17, 17, 148);
+  }
+
+  button.logout-btn {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: rgb(17, 17, 148);
+    color: white;
+    font-weight: 800;
+    border: rgb(17, 17, 148);
+  }
+
   
+  button.signup-btn {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: rgb(17, 17, 148);
+    color: white;
+    font-weight: 800;
+    border: rgb(17, 17, 148);
+  }
+
+  // home and account links
+
+  link.home-link {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: rgb(17, 17, 148);
+    color: white;
+    font-weight: 800;
+  }
