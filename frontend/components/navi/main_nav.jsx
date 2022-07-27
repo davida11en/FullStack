@@ -19,9 +19,9 @@ function mainNav(props){
                             </div>
                         </div>
 
-                        <div className="dropdown2">
-                        <button className="dropbtn2">Buy</button>
-                            <div className="dropdown-content2">
+                        <div className="dropdown">
+                        <button className="dropbtn">Buy</button>
+                            <div className="dropdown-content">
                                 <p>New York City</p>
                                     <Link className="borough" to="/listings/">Manhattan</Link>
                                     <Link className="borough" to="/listings/">Brooklyn</Link>
@@ -29,6 +29,9 @@ function mainNav(props){
                                     <Link className="borough" to="/listings/">The Bronx</Link>
                                     <Link className="borough" to="/listings/">Staten Island</Link>
                             </div>
+                        </div>
+                        <div className="dropdown">
+                        <button className="dropbtn">Sell</button>
                         </div>
                         <div className="linkedIn-btn">
                            <a href='https://www.linkedin.com/in/david-allen-asencio-9107b0122/'>LinkedIn</a>
