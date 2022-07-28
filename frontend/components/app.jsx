@@ -5,6 +5,7 @@ import ModalContainer from "./modal/modal_container";
 import Navz from './navi/navz';
 import HomePageContainer from './homepage/homepage_container';
 import ListingsIndexContainer from './listings/listings_container';
+import SellSplash from './sales/sellsplash';
 
 const App = (props) => (
     <div>
@@ -12,7 +13,8 @@ const App = (props) => (
         <Navz />
         {/* <Route path="/" component={HomePageContainer} /> */}
         <Route exact path="/" component={HomePageContainer} />
-        <Route path="/listings/" component={ListingsIndexContainer} />
+        {/* <Route path="/listings" component={ListingsIndexContainer} /> */}
+        <Route path="/sell-your-home" component={SellSplash} />
     </div>
 )
 

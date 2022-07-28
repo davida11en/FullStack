@@ -1,0 +1,41 @@
+
+
+.sellcontainer {
+    display: block;
+    padding-left: 0px;
+    padding-right: 0px;
+    position: fixed;
+    // margin-top: 60px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sellerlanding {
+    padding: 55px 0;
+
+}
+
+.sellerwrapper {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sellertitle {
+    // font-size: xx-large;
+    // position: fixed;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    -webkit-font-smoothing: antialiased;
+    color: rgb(26, 31, 44);
+    font-family: "Source Sans Pro", Helvetica, Arial, Geneva, sans-serif;
+    margin: 0px;
+    text-transform: none;
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 50px;
+}

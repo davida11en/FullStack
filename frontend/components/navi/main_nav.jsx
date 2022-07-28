@@ -31,7 +31,9 @@ function mainNav(props){
                             </div>
                         </div>
                         <div className="dropdown">
-                        <button className="dropbtn">Sell</button>
+                            <Link to="/sell-your-home">
+                                <button className="dropbtn" to="">Sell</button>
+                            </Link>
                         </div>
                         <div className="linkedIn-btn">
                            <a href='https://www.linkedin.com/in/david-allen-asencio-9107b0122/'>LinkedIn</a>
