@@ -26,7 +26,9 @@ export default ({ currentUser, logout, openSignupForm, openLoginForm }) => {
 
   return (
     <header className="nav-bar">
-      <h1 className="logo">🚶easyStreet</h1>
+      <Link to="/"> 
+        <h1 className="logo">🚶easyStreet</h1>
+      </Link>
       <div>
         {display}
       </div>
