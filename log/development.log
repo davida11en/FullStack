@@ -12161,3 +12161,5 @@ Processing by Api::SessionsController#create as JSON
 Completed 200 OK in 449ms (Views: 24.5ms | ActiveRecord: 17.4ms)
 
 
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/david-allen/.rbenv/versions/2.5.1/bin/annotate:23
