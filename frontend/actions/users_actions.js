@@ -22,3 +22,8 @@ export const requestSingleUser = (id) => (dispatch) => (
     UserUtil.fetchUser(id)
       .then(user => dispatch(receiveUser(user)))
 )
+
+export const updateUser = (user) => (dispatch) => (
+    UserUtil.updateUser(user)
+        .then(user => dispatch(receiveUser(user)))
+)

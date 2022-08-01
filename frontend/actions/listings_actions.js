@@ -4,6 +4,7 @@ export const RECEIVE_LISTINGS = "RECEIVE_LISTINGS";
 export const RECEIVE_LISTING = "RECEIVE_LISTING";
 export const CLEAR_LISTINGS = "CLEAR_LISTINGS";
 export const CLEAR_LISTING = "CLEAR_LISTING";
+export const RECEIVE_LISTING_ERRORS = "RECEIVE_LISTING_ERRORS";
 
 export const receiveListings = (listings) => ({
   type: RECEIVE_LISTINGS,
@@ -15,6 +16,15 @@ export const receiveListing = (listing) => ({
 });
 export const removeListings = () => ({
   type: CLEAR_LISTINGS,
+});
+
+export const removeListing = () => ({
+  type: CLEAR_LISTING,
+});
+
+export const recieveListingErrors = (errors) => ({
+  type: RECEIVE_LISTING_ERRORS,
+  errors,
 });
 
 

@@ -13,6 +13,9 @@ import {
     switch (action.type) {
       case RECEIVE_LISTINGS:
         Object.assign(nextState, action.listings);
+        listings.forEach((listing) => {
+          nextState[listing.id] = listing;
+        });
         return nextState;
       case RECEIVE_LISTING:
         nextState[action.listing.id] = action.listing;

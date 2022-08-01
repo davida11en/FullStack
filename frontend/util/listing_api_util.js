@@ -9,3 +9,11 @@ export const getListing = (listingId) =>
     url: `/api/listings/${listingId}`,
     method: "GET",
   });
+
+export const createListing = (listing) => 
+  $.ajax({
+    url: `/api/listings/`,
+    method: "POST",
+    data: listing,
+    
+  })
