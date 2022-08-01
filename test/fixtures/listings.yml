@@ -14,8 +14,6 @@
 #  bathrooms      :integer          not null
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
-#  lat            :float
-#  lng            :float
 #  description    :text             default(""), not null
 #  rent_bool      :boolean          default(FALSE)
 #  borough        :string           default("Brooklyn")

@@ -14,8 +14,6 @@
 #  bathrooms      :integer          not null
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
-#  lat            :float
-#  lng            :float
 #  description    :text             default(""), not null
 #  rent_bool      :boolean          default(FALSE)
 #  borough        :string           default("Brooklyn")
@@ -24,6 +22,7 @@
 class Listing < ApplicationRecord
     validates :name, :address, :neighborhood, :borough, :zip, :owner_id, :price, :bedrooms, :bathrooms, presence: true
     validates :name, uniqueness: true
+    
     belongs_to :owner, class_name: "User", foreign_key: "owner_id"
 
     has_one_attached :photo

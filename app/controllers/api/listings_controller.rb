@@ -3,19 +3,18 @@ class ListingsController < ApplicationController
     before_action :require_logged_in, only: [:create]
 
     def index
-        @listings = Listings.all
+        @listings = Listing.all
         render :index
     end
 
     def show
         @listing = Listing.find(params[:id])
-        render :show
     end
 
     def create 
         @listing = Listing.new(listing_params)
 
-        @listing.owner_id = current_user
+        @listing.owner = current_user
 
         if @listing.save
             p 'looking for listing ' + @listing
@@ -30,9 +29,20 @@ class ListingsController < ApplicationController
         p listing_params[:id]
         
         if @listing.update(listing_params)
+            @listing.save
           render :show
         else
           render json: @lisiting.errors.full_messages, status: 422
+        end
+    end
+
+    def destroy
+        @listing = Listing.find(params[:id])
+        if @listing.destroy
+            render json: ["Successfully Deleted"], status: 200
+        else
+            
+            render json: ["Sorry, we couldn't find what you were looking for"], status: 404
         end
     end
 

@@ -32,13 +32,9 @@ listing1 = Listing.create!({
   borough: "Brooklyn",
   zip: "12345", 
   property_type: "Fish Tank",
-  rent_bool: [true, false].sample(),
-  owner_id: 3,
-  lat: rand(40.666885..40.740644),
-  lng: -rand(73.765498..73.966863),
+  owner_id: user1.id,
   bedrooms: 2,
-  favorites: 0,
   bathrooms: 3,
-  price: 3,000,
-  description: "We found nemo"
+  price: 3000,
+  description: "We found nemo",
   })
