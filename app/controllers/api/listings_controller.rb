@@ -14,8 +14,8 @@ class ListingsController < ApplicationController
 
     def create 
         @listing = Listing.new(listing_params)
-        
-        @listing.lister = current_user
+
+        @listing.owner_id = current_user
 
         if @listing.save
             p 'looking for listing ' + @listing
