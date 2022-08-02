@@ -2,6 +2,7 @@ import {
     RECEIVE_LISTINGS,
     RECEIVE_LISTING,
     CLEAR_LISTINGS,
+    CLEAR_LISTING
   } from "../actions/listings_actions";
   
   const emptyListings = null;
@@ -22,6 +23,9 @@ import {
         return nextState;
       case CLEAR_LISTINGS:
         return Object.assign({}, emptyListings);
+      case CLEAR_LISTING:
+          delete nextState[action.listingId];
+          return nextState;
       default:
         return state;
     }

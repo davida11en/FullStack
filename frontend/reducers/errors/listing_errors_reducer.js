@@ -1,4 +1,4 @@
-import { RECEIVE_LISTING_ERRORS } from "../actions/listings_actions";
+import { RECEIVE_LISTING_ERRORS } from "../../actions/listings_actions";
 
 const _nullErrors = [];
 

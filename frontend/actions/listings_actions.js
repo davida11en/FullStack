@@ -18,8 +18,9 @@ export const removeListings = () => ({
   type: CLEAR_LISTINGS,
 });
 
-export const removeListing = () => ({
+export const removeListing = (listingId) => ({
   type: CLEAR_LISTING,
+  listingId
 });
 
 export const recieveListingErrors = (errors) => ({
@@ -32,7 +33,29 @@ export const getListings = () => (dispatch) =>
   ListingAPI.getListings().then((listings) =>
     dispatch(receiveListings(listings))
   );
+
 export const getListing = (listingId) => (dispatch) =>
   ListingAPI.getListing(listingId).then((listing) =>
     dispatch(receiveListing(listing))
+  );
+
+
+export const createListing = (listing) => (dispatch) => 
+  ListingAPI.createListing(listing).then((listing) => 
+    dispatch(receiveListing(listing))
+  );
+
+export const updateListing = (listing) => (dispatch) => 
+  ListingAPI.updateListing(listing).then((listing) => 
+    dispatch(receiveListing(listing))
+  );
+
+export const deleteListing = (listingId) => (dispatch) =>
+  ListingAPI.deleteListing(listingId).then((listing) =>
+    dispatch(receiveListing(listing))
+  );
+
+export const fetchUserListings = (userId) => (dispatch) =>
+  ListingAPI.fetchUserListings(userId).then((listings) =>
+    dispatch(receiveListings(listings))
   );

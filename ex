@@ -1,0 +1,17 @@
+=> [[32m#<Listing:0x00007f66e4290868[0m
+  id: [1;34m1[0m,
+  name: [31m[1;31m"[0m[31mDemo House[1;31m"[0m[31m[0m,
+  address: [31m[1;31m"[0m[31m42 Wallabee Way[1;31m"[0m[31m[0m,
+  neighborhood: [31m[1;31m"[0m[31mSydney[1;31m"[0m[31m[0m,
+  zip: [1;34m12345[0m,
+  price: [1;34m3000[0m,
+  property_type: [31m[1;31m"[0m[31mFish Tank[1;31m"[0m[31m[0m,
+  owner_id: [1;34m1[0m,
+  bedrooms: [1;34m2[0m,
+  bathrooms: [1;34m3[0m,
+  created_at: [1;34;4mMon[0m, [1;34m01[0m [1;34;4mAug[0m [1;34m2022[0m [1;34m17[0m:[1;34m34[0m:[1;34m23[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mMon[0m, [1;34m01[0m [1;34;4mAug[0m [1;34m2022[0m [1;34m17[0m:[1;34m34[0m:[1;34m23[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  description: [31m[1;31m"[0m[31mWe found nemo[1;31m"[0m[31m[0m,
+  rent_bool: [1;36mfalse[0m,
+  borough: [31m[1;31m"[0m[31mBrooklyn[1;31m"[0m[31m[0m,
+  favorite_count: [1;34m0[0m[32m>[0m]

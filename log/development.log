@@ -12356,3 +12356,176 @@ Migrating to ChangeUsersTable1 (20220801175047)
   ↳ bin/rails:9
   [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/" for ::1 at 2022-08-01 20:32:31 -0400
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/david-allen/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.8/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (9.7ms)
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 3860ms (Views: 3835.8ms | ActiveRecord: 23.6ms)
+
+
+Started GET "/api/listings" for ::1 at 2022-08-01 20:32:47 -0400
+
+LoadError - Unable to autoload constant Api::ListingsController, expected /home/david-allen/aa_classwork/FullStack/EasyStreet/app/controllers/api/listings_controller.rb to define it:
+
+Started GET "/" for ::1 at 2022-08-01 20:33:20 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (8.4ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 152ms (Views: 148.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/listings" for ::1 at 2022-08-01 20:33:33 -0400
+
+LoadError - Unable to autoload constant Api::ListingsController, expected /home/david-allen/aa_classwork/FullStack/EasyStreet/app/controllers/api/listings_controller.rb to define it:
+
+Started POST "/__better_errors/ecd12bceb0411300/variables" for ::1 at 2022-08-01 20:33:34 -0400
+Started GET "/" for ::1 at 2022-08-01 20:34:23 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 886ms (Views: 884.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/listings" for ::1 at 2022-08-01 20:34:36 -0400
+
+LoadError - Unable to autoload constant Api::ListingsController, expected /home/david-allen/aa_classwork/FullStack/EasyStreet/app/controllers/api/listings_controller.rb to define it:
+
+Started GET "/" for ::1 at 2022-08-01 20:39:23 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 1208ms (Views: 1206.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/listings" for ::1 at 2022-08-01 20:39:26 -0400
+
+LoadError - Unable to autoload constant Api::ListingsController, expected /home/david-allen/aa_classwork/FullStack/EasyStreet/app/controllers/api/listings_controller.rb to define it:
+
+Started GET "/" for ::1 at 2022-08-01 20:51:08 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 1280ms (Views: 1276.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/api/listings" for ::1 at 2022-08-01 20:51:12 -0400
+
+LoadError - Unable to autoload constant Api::ListingsController, expected /home/david-allen/aa_classwork/FullStack/EasyStreet/app/controllers/api/listings_controller.rb to define it:
+
+Started GET "/" for ::1 at 2022-08-01 20:51:56 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 488ms (Views: 481.6ms | ActiveRecord: 5.7ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bundle.js-a659a2ffb1978df23d9a82d6a6e3f295c3b5ef869d12fa268264f3411ed5452e.map"):
+  
+actionpack (5.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.8) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.8) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.8) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.8) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.8) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/listings" for ::1 at 2022-08-01 20:51:59 -0400
+
+LoadError - Unable to autoload constant Api::ListingsController, expected /home/david-allen/aa_classwork/FullStack/EasyStreet/app/controllers/api/listings_controller.rb to define it:
+
+Started GET "/" for ::1 at 2022-08-01 20:52:29 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (19.2ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 200 OK in 1564ms (Views: 1563.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/listings" for ::1 at 2022-08-01 20:52:32 -0400
+
+LoadError - Unable to autoload constant Api::ListingsController, expected /home/david-allen/aa_classwork/FullStack/EasyStreet/app/controllers/api/listings_controller.rb to define it:
+
+Started GET "/api/listings" for ::1 at 2022-08-01 20:54:48 -0400
+
+LoadError - Unable to autoload constant Api::ListingsController, expected /home/david-allen/aa_classwork/FullStack/EasyStreet/app/controllers/api/listings_controller.rb to define it:
+
+Started POST "/__better_errors/a761a5d10d2bea39/variables" for ::1 at 2022-08-01 20:54:49 -0400
+  [1m[36mListing Load (3.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+Started GET "/api/users" for ::1 at 2022-08-01 21:09:08 -0400
+Processing by Api::UsersController#index as JSON
+  Rendering api/users/index.json.jbuilder
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/api/users/index.json.jbuilder:1
+  Rendered api/users/index.json.jbuilder (32.4ms)
+Completed 200 OK in 38ms (Views: 24.6ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/api/listings" for ::1 at 2022-08-01 21:10:17 -0400
+
+LoadError - Unable to autoload constant Api::ListingsController, expected /home/david-allen/aa_classwork/FullStack/EasyStreet/app/controllers/api/listings_controller.rb to define it:
+
+Started POST "/__better_errors/ade8f611303e99cc/variables" for ::1 at 2022-08-01 21:10:18 -0400
+Started GET "/api/listings" for ::1 at 2022-08-01 22:46:01 -0400
+
+TypeError - superclass mismatch for class ListingsController:
+  app/controllers/api/listings_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/6ecea519579af5a7/variables" for ::1 at 2022-08-01 22:46:01 -0400
+Started GET "/api/listings" for ::1 at 2022-08-01 22:50:56 -0400
+
+TypeError - superclass mismatch for class ListingsController:
+  app/controllers/api/listings_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/8d268d0bb13fd317/variables" for ::1 at 2022-08-01 22:50:57 -0400
+Started GET "/api/listings" for ::1 at 2022-08-01 22:57:41 -0400
+Processing by Api::ListingsController#index as JSON
+  Rendering api/listings/index.json.jbuilder
+  [1m[36mListing Load (2.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/api/listings/index.json.jbuilder:1
+  Rendered api/listings/_listing.json.jbuilder (1.4ms)
+  [1m[36mUser Load (10.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/listings/index.json.jbuilder:6
+  Rendered api/listings/index.json.jbuilder (233.8ms)
+Completed 200 OK in 282ms (Views: 192.6ms | ActiveRecord: 50.8ms)
+
+
