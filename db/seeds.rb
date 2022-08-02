@@ -17,6 +17,14 @@ user1 = User.create(
     password: 123456
   )
 
+user3 = User.create(
+  username: 'bossman',
+  email: "bo55man@work.com",
+  password: 123456,
+  name: 'Tony Soprano',
+  phone: '1-(800)-123-4567'
+)
+
 User.create(
     username: "bill",
     email: "demo@user.com",
@@ -37,4 +45,18 @@ listing1 = Listing.create!({
   bathrooms: 3,
   price: 3000,
   description: "We found nemo",
+  })
+
+listing2 = Listing.create!({
+  name: "Bada Bing", 
+  address: "Joizey Turnpike", 
+  neighborhood: "Sydney",
+  borough: "Newer Part",
+  zip: "12345", 
+  property_type: "Office",
+  owner_id: user3.id,
+  bedrooms: 3,
+  bathrooms: 2,
+  price: 7000,
+  description: "Only the best",
   })

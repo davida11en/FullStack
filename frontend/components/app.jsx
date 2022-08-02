@@ -9,8 +9,8 @@ import SellSplashContainer from './sales/sellsplashcontainer';
 
 const App = (props) => (
     <div>
-        {/* <ModalContainer /> */}
-        {/* <Navz /> */}
+        <ModalContainer /> 
+        <Navz />
         {/* <Route path="/" component={HomePageContainer} /> */}
         <Route exact path="/" component={HomePageContainer} />
         <Route path="/listings" component={ListingsIndexContainer} />

@@ -5,18 +5,21 @@ import {
     CLEAR_LISTING
   } from "../actions/listings_actions";
   
-  const emptyListings = null;
+const emptyListings = null;
   
-  export const listingsReducer = (state = {}, action) => {
+const listingsReducer = (state = {}, action) => {
     Object.freeze(state);
     let nextState = Object.assign({}, state);
   
     switch (action.type) {
       case RECEIVE_LISTINGS:
-        Object.assign(nextState, action.listings);
-        listings.forEach((listing) => {
-          nextState[listing.id] = listing;
-        });
+        nextState = Object.assign(nextState, action.listings);
+        // console.log('looking for listings', listings)
+        // listings.forEach((listing) => {
+        //   nextState[listing.id] = listing;
+        // });
+
+        // nextState[listing.id] = listing;
         return nextState;
       case RECEIVE_LISTING:
         nextState[action.listing.id] = action.listing;

@@ -12,19 +12,19 @@ class ListingsIndex extends React.Component {
         // {console.log('lookin for', listings)}
         {console.log('lookin for PROPS', this.props)} 
         return (
-            <div>
-                <h1> INDEX PAGE </h1>
-                <ul>
-                {
-                    listings.map(listing => (
-                      
-                        <ListingIndexItem
-                            listing={listing}
-                            getListing={getListing}
-                            key={listing.id}
-                        />
-                    ))
-                }
+            <div className='listings-index-container'>
+                <h1 className="listings-index-title"> INDEX PAGE </h1>
+                <ul className="listings-ul">
+                    {
+                        listings.map(listing => (
+                        
+                            <ListingIndexItem
+                                listing={listing}
+                                getListing={getListing}
+                                key={listing.id}
+                            />
+                        ))
+                    }
                 </ul>
                 
                 {/* <AddListing/> */}

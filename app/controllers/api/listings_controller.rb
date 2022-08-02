@@ -32,7 +32,7 @@ class Api::ListingsController < ApplicationController
             @listing.save
           render :show
         else
-          render json: @lisiting.errors.full_messages, status: 422
+          render json: @listing.errors.full_messages, status: 422
         end
     end
 
