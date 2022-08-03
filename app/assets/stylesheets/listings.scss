@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
- .listings-ul {
+ .listings-ul, .listing-show {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -16,6 +16,8 @@
     flex-wrap: wrap;
     // padding: 40px 40px;
 }
+
+
 
 // * {
 //     box-sizing: border-box;

@@ -20,7 +20,7 @@ const Auth = ({ loggedIn ,path, component: Component }) => (
     <Route
         path={path}
         render={props => (
-            loggedIn ? <Redirect to="/explore" /> : <Component {...props} />
+            loggedIn ? <Redirect to="/" /> : <Component {...props} />
         )} //if the user is loggedIn, redirect them to the home page
     />      //else, spread all the props and add them to the component
 );
@@ -29,7 +29,7 @@ const Protected = ({ loggedIn, path, component: Component }) => (
     <Route 
         path={path}
         render={props =>  (
-            loggedIn ? <Component {...props } /> : <Redirect to="/explore" />
+            loggedIn ? <Component {...props } /> : <Redirect to="/" />
         )}
     />
 );

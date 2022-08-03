@@ -22,7 +22,9 @@ const listingsReducer = (state = {}, action) => {
         // nextState[listing.id] = listing;
         return nextState;
       case RECEIVE_LISTING:
+        console.log('listing action ', action)
         nextState[action.listing.id] = action.listing;
+        
         return nextState;
       case CLEAR_LISTINGS:
         return Object.assign({}, emptyListings);

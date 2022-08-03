@@ -7,11 +7,14 @@ const ListingIndexItem = props => (
   <li className='listing-item' >
     <h3 className='test-class' >LISTING!</h3>
 
-    <Link to={`/listings/${props.listing.id}`}>{props.listing.name}</Link>
+    <h4>{props.listing.name}</h4>
     <br></br>
     <Link to={`/listings/${props.listing.id}/edit`}>Edit</Link>
     <br></br>
-    <button onClick={() => props.getListing(props.listing.id)}>show page</button>
+    {console.log('checkin ids', props.listing.id)}
+    <Link to={`/listings/${props.listing.id}`}>
+      <button>LIS-TING</button>
+    </Link>
   </li>
 );
 

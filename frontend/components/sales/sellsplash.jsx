@@ -50,10 +50,13 @@ function SellSplash(props) {
                                 className='st-add' 
                                 // type='hidden' 
                                 />
-                        </label>  
-                        <button className='sell-form-btn' type="submit">
-                            Get Started
-                        </button>
+                        </label>
+                        <Link to="/listings/" >
+                            <button className='sell-form-btn' type="submit">
+                                Get Started
+                            </button>
+                        </Link>
+                     
                     </form>  
                     <p className='blurb-P'>
                         Are you a returning home owner? {'  '}

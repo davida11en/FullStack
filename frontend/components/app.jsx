@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+import { Router,  browserHistory } from 'react-router';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import ModalContainer from "./modal/modal_container";
 import Navz from './navi/navz';
@@ -15,10 +16,12 @@ const App = (props) => (
         <ModalContainer /> 
         <Navz />
         {/* <Route path="/" component={HomePageContainer} /> */}
-        <Route exact path="/" component={HomePageContainer} />
-        <Route path="/sell-your-home" component={SellSplashContainer} />
-        <Route path="/listings" component={ListingsIndexContainer} />
-        <Route path="/listings/:listingId" component={ListingShowContainer} />
+       
+            <Route exact path="/" component={HomePageContainer} />
+            <Route path="/sell-your-home" component={SellSplashContainer} />
+            <Route exact path="/listings" component={ListingsIndexContainer} />
+            <Route path="/listings/:listingId" component={ListingShowContainer} />
+
     </div>
 )
 

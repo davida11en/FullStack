@@ -6,10 +6,13 @@ import ListingShow from './listing_show';
 //   listing: state.listings[ownProps.match.params.listingId]
 // });
 
- const mapSTP = (state, ownProps) => {
+const mapSTP = (state, ownProps) => {
+    console.log('lookin for state', state)
     console.log('lookin for OWN', ownProps)
+    // console.log('lookin for listing', listing)
     return {
-    listing: state.listings[ownProps.match.params.listingId]
+        currentUser: state.entities.users[state.session.id],
+        listing: state.entities.listings[ownProps.match.params.listingId]
     }
 };
 
