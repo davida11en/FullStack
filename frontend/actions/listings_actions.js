@@ -51,8 +51,8 @@ export const updateListing = (listing) => (dispatch) =>
   );
 
 export const deleteListing = (listingId) => (dispatch) =>
-  ListingAPI.deleteListing(listingId).then((listing) =>
-    dispatch(receiveListing(listing))
+  ListingAPI.deleteListing(listingId).then(() =>
+    dispatch(removeListing(listingId))
   );
 
 export const fetchUserListings = (userId) => (dispatch) =>

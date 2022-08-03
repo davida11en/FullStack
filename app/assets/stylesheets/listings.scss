@@ -2,14 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+ .listings-ul {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+    // margin-top: 10%;
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    // padding: 40px 40px;
+}
+
 // * {
 //     box-sizing: border-box;
 //   }
   
-  body {
-    margin: 0;
-    font-family: Arial;
-  }
+  // body {
+  //   margin: 0;
+  //   font-family: Arial;
+  // }
   
 //   .header {
 //     text-align: center;
@@ -25,43 +40,43 @@
 //     }
 //   }
   
-  .row {
-    margin-top: 10%;
-    display: -ms-flexbox; /* IE10 */
-    display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
-    flex-wrap: wrap;
-    padding: 40px 40px;
-  }
+  // .row {
+  //   margin-top: 10%;
+  //   display: -ms-flexbox; /* IE10 */
+  //   display: flex;
+  //   -ms-flex-wrap: wrap; /* IE10 */
+  //   flex-wrap: wrap;
+  //   padding: 40px 40px;
+  // }
   
   /* Create four equal columns that sits next to each other */
-  .column {
-    -ms-flex: 25%; /* IE10 */
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 4px;
-  }
+  // .column {
+  //   -ms-flex: 25%; /* IE10 */
+  //   flex: 25%;
+  //   max-width: 25%;
+  //   padding: 0 4px;
+  // }
   
-  .column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
-  }
+  // .column img {
+  //   margin-top: 8px;
+  //   vertical-align: middle;
+  //   width: 100%;
+  // }
   
   /* Responsive layout - makes a two column-layout instead of four columns */
-  @media screen and (max-width: 800px) {
-    .column {
-      -ms-flex: 50%;
-      flex: 50%;
-      max-width: 50%;
-    }
-  }
+  // @media screen and (max-width: 800px) {
+  //   .column {
+  //     -ms-flex: 50%;
+  //     flex: 50%;
+  //     max-width: 50%;
+  //   }
+  // }
   
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column {
-      -ms-flex: 100%;
-      flex: 100%;
-      max-width: 100%;
-    }
-  }
+  // @media screen and (max-width: 600px) {
+  //   .column {
+  //     -ms-flex: 100%;
+  //     flex: 100%;
+  //     max-width: 100%;
+  //   }
+  // }

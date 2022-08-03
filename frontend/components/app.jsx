@@ -6,6 +6,9 @@ import Navz from './navi/navz';
 import HomePageContainer from './homepage/homepage_container';
 import ListingsIndexContainer from './listings/listings_index_container';
 import SellSplashContainer from './sales/sellsplashcontainer';
+import ListingShowContainer from './listings/listing_show_container';
+
+
 
 const App = (props) => (
     <div>
@@ -13,8 +16,9 @@ const App = (props) => (
         <Navz />
         {/* <Route path="/" component={HomePageContainer} /> */}
         <Route exact path="/" component={HomePageContainer} />
-        <Route path="/listings" component={ListingsIndexContainer} />
         <Route path="/sell-your-home" component={SellSplashContainer} />
+        <Route path="/listings" component={ListingsIndexContainer} />
+        <Route path="/listings/:listingId" component={ListingShowContainer} />
     </div>
 )
 

@@ -2,12 +2,12 @@ import { connect } from "react-redux";
 import { getListings, getListing, removeListings } from "../../actions/listings_actions";
 import ListingsIndex from "./listings_index";
 
-export const mSTP = (state, ownProps) => ({
+const mSTP = (state, ownProps) => ({
   currentUser: state.entities.users[state.session.id],
   listings: Object.values(state.entities.listings),
 });
 
-export const mDTP = (dispatch) => ({
+const mDTP = (dispatch) => ({
   getListings: () => dispatch(getListings()),
   getListing: listingId => dispatch(getListing(listingId)),
   removeListings: () => dispatch(removeListings()),
